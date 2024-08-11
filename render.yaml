@@ -10,6 +10,6 @@ services:
       apt-get update
       apt-get install -y google-chrome-stable
       wget -O /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
-      unzip /tmp/chromedriver.zip -d /usr/local/bin/
+      unzip /tmp/chromedriver.zip -d /opt/render/project/bin
       pip install -r requirements.txt
     startCommand: hypercorn api_async:app --bind 0.0.0.0:$PORT
