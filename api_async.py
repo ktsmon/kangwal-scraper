@@ -53,9 +53,6 @@ def create_browser():
     chrome_bin = os.environ.get('GOOGLE_CHROME_BIN', '/usr/bin/google-chrome')
     options.binary_location = chrome_bin
 
-    # Set ChromeDriver path
-    chrome_driver_path = os.environ.get('CHROMEDRIVER_PATH', '/usr/local/bin/chromedriver')
-
     return uc.Chrome(options=options)
 
 
