@@ -12,4 +12,4 @@ services:
       wget -O /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
       unzip /tmp/chromedriver.zip -d /usr/local/bin/
       pip install -r requirements.txt
-    startCommand: hypercorn app:app --bind 0.0.0.0:$PORT
+    startCommand: hypercorn api_sync:app --bind 0.0.0.0:$PORT
