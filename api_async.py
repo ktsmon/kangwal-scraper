@@ -48,6 +48,14 @@ def create_browser():
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
+
+    # Set the binary location
+    chrome_bin = os.environ.get('GOOGLE_CHROME_BIN', '/usr/bin/google-chrome')
+    options.binary_location = chrome_bin
+
+    # Set ChromeDriver path
+    chrome_driver_path = os.environ.get('CHROMEDRIVER_PATH', '/usr/local/bin/chromedriver')
+
     return uc.Chrome(options=options)
 
 
